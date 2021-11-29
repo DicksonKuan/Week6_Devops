@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Test Script
         uses: actions/checkout@v2
         with:
-          repository: lowkh2/DevOpsQARepo
+          repository: lowkh/HelloWorldDemoT01
           path: tests
           token: ${{secrets.QA_REMOTE}}
           
