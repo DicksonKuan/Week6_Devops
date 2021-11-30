@@ -18,7 +18,7 @@ jobs:
     - name: Checkout Own Repo
       uses: actions/checkout@v2
       with: 
-        repository: lowkh/HelloWorldDemoT01
+        repository: DicksonKuan/Week6_Devops
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
