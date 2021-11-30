@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
-        repository: lowkh2/DevOpsQARepo
+        repository: Week6_Devops
         path: tests
         token: ${{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}}
     - name: Linter Check with Flake8
