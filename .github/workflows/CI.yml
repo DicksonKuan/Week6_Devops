@@ -24,7 +24,7 @@ jobs:
       with:
         repository: Week6_Devops
         path: tests
-        token: ${{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}}
+        token: ${{secrets.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}}
     - name: Linter Check with Flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
@@ -47,5 +47,5 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.24
       if: always()
       with:
-        github_token: ${{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}}
+        github_token: ${{secrets.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}}
         files: report.xml
