@@ -24,7 +24,7 @@ jobs:
       with:
         repository: DicksonKuan/Week6_Devops
         path: tests
-        token: ${{secrets.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}}
+        token: ${{ secrets.QA_REMOTE }}
     - name: Linter Check with Flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
@@ -38,7 +38,7 @@ jobs:
       uses: nashmaniac/create-issue-action@v1.1
       with:
           title: Build Failed
-          token: ${{secrets.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}}
+          token: ${{secrets.GITHUB_TOKEN}}
           assignees: ${{github.actor}}
           labels: worflow-failed
           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}       
@@ -47,5 +47,5 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.24
       if: always()
       with:
-        github_token: ${{secrets.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}}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         files: report.xml
